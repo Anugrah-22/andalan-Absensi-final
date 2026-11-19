@@ -1,0 +1,14 @@
+PAKET INSTAL SiAndal (PWA)
+1. Unggah isi folder ini ke hosting HTTPS sekolah (Netlify, Vercel, GitHub Pages, cPanel, dll).
+2. Buka alamatnya di Chrome/Edge (laptop) atau Chrome (Android) -> tombol "Instal Aplikasi SiAndal" di halaman login akan aktif.
+3. iPhone: Safari -> Bagikan -> Tambah ke Layar Utama.
+Catatan: Service worker hanya berjalan di HTTPS (atau localhost), sehingga halaman tetap bisa dibuka tanpa internet setelah kunjungan pertama.
+
+PEMBARUAN APLIKASI
+- Saat Anda mengunggah index.html versi baru, ubah angka di sw.js (const C='siandal-v6') menjadi v7, v8, dst.
+- Pengguna yang sudah memasang aplikasi akan melihat tombol "Perbarui sekarang" saat versi baru siap.
+- Gunakan menu Pemeliharaan (admin) untuk mengunci akses sementara selama pembaruan.
+
+MODE DATABASE
+- Isi config.js dengan URL & anon key Supabase (lihat siandal-database/PANDUAN-DATABASE.md).
+- Jika config.js dibiarkan kosong, aplikasi berjalan dalam mode lokal (data hanya di perangkat).
